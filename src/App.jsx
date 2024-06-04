@@ -4,7 +4,7 @@ import { Tile } from './components/Tile'
 import { Button } from './components/Button'
 import { shuffle } from './libs/helpers/shuffle'
 
-const number_of_tiles = 3
+const number_of_tiles = 9
 
 function App() {
   const [tiles, setTiles] = useState([])
