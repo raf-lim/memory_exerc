@@ -1,0 +1,11 @@
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    cursor: pointer;
+    background-size: contain;
+}
+
+.revealed {
+  pointer-events: none;
+}
