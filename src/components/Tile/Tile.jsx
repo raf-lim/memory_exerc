@@ -1,17 +1,17 @@
 import styles from './Tile.module.css'
 
-export function Tile({ img_url, isRevealed, onRevealClick }) {
+export function Tile({ img_url, isRevealed, onClick }) {
 
     return (
-        <div 
+        <img 
             className={
                 !isRevealed 
                     ? styles.tile
                     : `${styles.tile} ${styles.revealed}`
             }
-            style={isRevealed ? { backgroundImage: `url(${img_url})` } : null}
-            onClick={onRevealClick}
+            src={isRevealed ? img_url : ''}
+            onClick={onClick}
         >
-        </div>
+        </img>
     )
 }
