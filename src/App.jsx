@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './App.module.css'
 import { Tile } from './components/Tile'
 import { Button } from './components/Button'
-import { shuffle } from './libs/helpers/shuffle'
+import { shuffle } from './helpers/shuffle'
 
 const number_of_tiles = 9
 
