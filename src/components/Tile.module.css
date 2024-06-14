@@ -1,9 +1,9 @@
 .tile {
     width: 100px;
     height: 100px;
+    background-size: contain;
     background-color: gray;
     cursor: pointer;
-    background-size: contain;
 }
 
 .revealed {

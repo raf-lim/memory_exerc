@@ -3,15 +3,15 @@ import styles from './Tile.module.css'
 export function Tile({ img_url, isRevealed, onRevealClick }) {
 
     return (
-        <div 
+        <img 
             className={
                 !isRevealed 
                     ? styles.tile
                     : `${styles.tile} ${styles.revealed}`
             }
-            style={isRevealed ? { backgroundImage: `url(${img_url})` } : null}
+            src={isRevealed ? img_url : ''}
             onClick={onRevealClick}
         >
-        </div>
+        </img>
     )
 }
