@@ -20,7 +20,7 @@ function App() {
     const tiles_objs = tiles_urls.map((url, idx) => (
       { 'id': idx, 'url': url, 'isRevealed': false, 'isMatched': false}
     ))
-    return shuffle(tiles_objs)
+    setTiles(shuffle(tiles_objs))
   }
 
   function revealTile(id) {
@@ -87,13 +87,13 @@ function App() {
       {
         matched < number_of_tiles
           ? <Button
-            loadTilesOnClick={() => setTiles(handleLoadNewGame())}
+            loadTilesOnClick={handleLoadNewGame}
             >{!tiles.length ? 'Load game' : 'Reset'}
             </Button>
           : <>
             <h2 className={styles.won}>YOU WIN !!!</h2>
             <Button
-              loadTilesOnClick={() => setTiles(handleLoadNewGame())}
+              loadTilesOnClick={handleLoadNewGame}
               >{!tiles.length ? 'Load game' : 'Reset'}
             </Button>
             </>
