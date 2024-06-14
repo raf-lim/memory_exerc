@@ -1,6 +1,6 @@
 import styles from './Tile.module.css'
 
-export function Tile({ img_url, isRevealed, onRevealClick }) {
+export function Tile({ img_url, isRevealed, onClick }) {
 
     return (
         <img 
@@ -10,7 +10,7 @@ export function Tile({ img_url, isRevealed, onRevealClick }) {
                     : `${styles.tile} ${styles.revealed}`
             }
             src={isRevealed ? img_url : ''}
-            onClick={onRevealClick}
+            onClick={onClick}
         >
         </img>
     )
